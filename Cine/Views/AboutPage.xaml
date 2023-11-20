@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cine.Views.AboutPage"
+             xmlns:vm="clr-namespace:Cine.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+                <Label Text=" "></Label>
+                <StackLayout>
+                    <ContentView>
+                        <Image Source="utt.png" VerticalOptions="Center" HeightRequest="150"></Image>
+                    </ContentView>
+                </StackLayout>
+                <ScrollView>
+                    <StackLayout>
+                        <Label Text="" HorizontalTextAlignment="Center" FontSize="Body" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="{AppThemeBinding Light=#1690F4, Dark=#70283e}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="30,24,30,24">
+                            <Label Text="Nombre del Alumno" HorizontalTextAlignment="Center" FontSize="Body" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                            <Label Text="Carlos Armando Lopez Laguna" HorizontalTextAlignment="Center" FontSize="Body" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="{AppThemeBinding Light=#1690F4, Dark=#70283e}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="30,24,30,24">
+                            <Label Text="Matrícula del Alumno" HorizontalTextAlignment="Center" FontSize="Body" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                            <Label Text="20170032" HorizontalTextAlignment="Center" FontSize="Body" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="{AppThemeBinding Light=#1690F4, Dark=#70283e}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="30,24,30,24">
+                            <Label Text="Grado y Sección" HorizontalTextAlignment="Center" FontSize="Body" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                            <Label Text="10 °A" HorizontalTextAlignment="Center" FontSize="Body" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="{AppThemeBinding Light=#1690F4, Dark=#70283e}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="30,24,30,24">
+                            <Label Text="Materia" HorizontalTextAlignment="Center" FontSize="Body" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                            <Label Text="Desarrollo Movil Integral" HorizontalTextAlignment="Center" FontSize="Body" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+                            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="{AppThemeBinding Light=#1690F4, Dark=#70283e}"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="30,24,30,24">
+                            <Label Text="Docente" HorizontalTextAlignment="Center" FontSize="Body" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                            <Label Text="Dr. Eliasib Reyes Moreno" HorizontalTextAlignment="Center" FontSize="Body" FontAttributes="Bold" TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

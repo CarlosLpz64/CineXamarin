@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cine.Views.MoviesPage">
+    <ContentPage.Content>
+        <ListView x:Name="lmovies" SeparatorColor="Black" RowHeight="200" ItemSelected="lmovies_ItemSelected">
+            <ListView.ItemTemplate>
+                <!--
+                <DataTemplate>
+                    <ImageCell Text="{Binding name}" Detail="{Binding category.name}" ImageSource="{Binding cover_path}" DetailColor="Black"/>
+                </DataTemplate>
+                -->
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10,5,10,5">
+                            <Image Source="{Binding cover_path}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
+                            <StackLayout>
+                                <Label Text="{Binding name}" TextColor="Black" FontAttributes="Bold" />
+                                <Label Text="{Binding category.categoryString}" TextColor="Gray" />
+                                <Label Text="{Binding durationString}" TextColor="Gray" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

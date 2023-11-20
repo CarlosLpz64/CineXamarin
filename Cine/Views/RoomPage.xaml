@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Cine.Views.RoomPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="DimGray" HeightRequest="30" Margin="5,10,5,25">
+                <Label Text="Pantalla aquí" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="Title" Margin="0,0,0,0"/>
+            </Frame>
+
+            <Grid x:Name="seatGrid" HorizontalOptions="CenterAndExpand" Padding="15">
+            </Grid>
+
+            <Button Text="Confirmar" Clicked="OnReserveSeatClicked" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
